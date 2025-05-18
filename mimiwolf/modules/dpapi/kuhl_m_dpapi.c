@@ -13,8 +13,8 @@ const KUHL_M_C kuhl_m_c_dpapi[] = {
 	{kuhl_m_dpapi_create,		L"create",		L"Create a Masterkey file from raw key and metadata"},
 	
 	{kuhl_m_dpapi_keys_capi,	L"capi",		L"CAPI key test"},
-	{kuhl_m_dpapi_keys_cng,		L"cng",			L"CNG key test"},
-	{kuhl_m_dpapi_keys_tpm,		L"tpm",			L"TPM key test"},
+	//{kuhl_m_dpapi_keys_cng,		L"cng",			L"CNG key test"},
+	//{kuhl_m_dpapi_keys_tpm,		L"tpm",			L"TPM key test"},
 	{kuhl_m_dpapi_cred,			L"cred",		L"CRED test"},
 	{kuhl_m_dpapi_vault,		L"vault",		L"VAULT test"},
 	{kuhl_m_dpapi_wifi,			L"wifi",		L"WiFi test"},
@@ -23,12 +23,12 @@ const KUHL_M_C kuhl_m_c_dpapi[] = {
 	{kuhl_m_dpapi_ssh,			L"ssh",			L"SSH Agent registry cache"},
 	{kuhl_m_dpapi_rdg,			L"rdg",			L"RDG saved passwords"},
 	{kuhl_m_dpapi_powershell,	L"ps",			L"PowerShell credentials (PSCredentials or SecureString)"},
-	{kuhl_m_dpapi_lunahsm,		L"luna",		L"Safenet LunaHSM KSP"},
-	{kuhl_m_dpapi_cloudap_keyvalue_derived,	L"cloudapkd",	L""},
-	{kuhl_m_dpapi_cloudap_fromreg, L"cloudapreg",	L""},
+	//{kuhl_m_dpapi_lunahsm,		L"luna",		L"Safenet LunaHSM KSP"},
+	//{kuhl_m_dpapi_cloudap_keyvalue_derived,	L"cloudapkd",	L""},
+	//{kuhl_m_dpapi_cloudap_fromreg, L"cloudapreg",	L""},
 	{kuhl_m_dpapi_sccm_networkaccessaccount, L"sccm",	L""},
-	{kuhl_m_dpapi_citrix,		L"citrix",	L""},
-	{kuhl_m_dpapi_oe_cache,		L"cache", NULL},
+	//{kuhl_m_dpapi_citrix,		L"citrix",	L""},
+	//{kuhl_m_dpapi_oe_cache,		L"cache", NULL},
 };
 const KUHL_M kuhl_m_dpapi = {
 	L"dpapi",	L"DPAPI Module (by API or RAW access)", L"Data Protection application programming interface",

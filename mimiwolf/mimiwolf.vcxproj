@@ -121,7 +121,6 @@
     <ClCompile Include="..\modules\kull_m_cabinet.c" />
     <ClCompile Include="..\modules\kull_m_cred.c" />
     <ClCompile Include="..\modules\kull_m_crypto.c" />
-    <ClCompile Include="..\modules\kull_m_crypto_ngc.c" />
     <ClCompile Include="..\modules\kull_m_crypto_remote.c" />
     <ClCompile Include="..\modules\kull_m_crypto_sk.c" />
     <ClCompile Include="..\modules\kull_m_dpapi.c" />
@@ -170,11 +169,8 @@
     <ClCompile Include="modules\dpapi\kuhl_m_dpapi.c" />
     <ClCompile Include="modules\dpapi\kuhl_m_dpapi_oe.c" />
     <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_chrome.c" />
-    <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_citrix.c" />
-    <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_cloudap.c" />
     <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_creds.c" />
     <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_keys.c" />
-    <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_lunahsm.c" />
     <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_powershell.c" />
     <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_rdg.c" />
     <ClCompile Include="modules\dpapi\packages\kuhl_m_dpapi_sccm.c" />
@@ -200,14 +196,12 @@
     <ClCompile Include="modules\kuhl_m_token.c" />
     <ClCompile Include="modules\kuhl_m_ts.c" />
     <ClCompile Include="modules\kuhl_m_vault.c" />
-    <ClCompile Include="modules\kuhl_m_minesweeper.c" />
     <ClCompile Include="modules\lsadump\kuhl_m_lsadump_dc.c" />
     <ClCompile Include="modules\sekurlsa\crypto\kuhl_m_sekurlsa_nt5.c" />
     <ClCompile Include="modules\sekurlsa\crypto\kuhl_m_sekurlsa_nt6.c" />
     <ClCompile Include="modules\sekurlsa\kuhl_m_sekurlsa.c" />
     <ClCompile Include="modules\sekurlsa\kuhl_m_sekurlsa_sk.c" />
     <ClCompile Include="modules\sekurlsa\kuhl_m_sekurlsa_utils.c" />
-    <ClCompile Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_cloudap.c" />
     <ClCompile Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_credman.c" />
     <ClCompile Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_dpapi.c" />
     <ClCompile Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_kerberos.c" />
@@ -222,7 +216,6 @@
     <ClInclude Include="..\modules\kull_m_cabinet.h" />
     <ClInclude Include="..\modules\kull_m_cred.h" />
     <ClInclude Include="..\modules\kull_m_crypto.h" />
-    <ClInclude Include="..\modules\kull_m_crypto_ngc.h" />
     <ClInclude Include="..\modules\kull_m_crypto_remote.h" />
     <ClInclude Include="..\modules\kull_m_crypto_sk.h" />
     <ClInclude Include="..\modules\kull_m_crypto_system.h" />
@@ -271,11 +264,8 @@
     <ClInclude Include="modules\dpapi\kuhl_m_dpapi.h" />
     <ClInclude Include="modules\dpapi\kuhl_m_dpapi_oe.h" />
     <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_chrome.h" />
-    <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_citrix.h" />
-    <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_cloudap.h" />
     <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_creds.h" />
     <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_keys.h" />
-    <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_lunahsm.h" />
     <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_powershell.h" />
     <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_rdg.h" />
     <ClInclude Include="modules\dpapi\packages\kuhl_m_dpapi_sccm.h" />
@@ -302,7 +292,6 @@
     <ClInclude Include="modules\kuhl_m_token.h" />
     <ClInclude Include="modules\kuhl_m_ts.h" />
     <ClInclude Include="modules\kuhl_m_vault.h" />
-    <ClInclude Include="modules\kuhl_m_minesweeper.h" />
     <ClInclude Include="modules\lsadump\kuhl_m_lsadump_dc.h" />
     <ClInclude Include="modules\sekurlsa\crypto\kuhl_m_sekurlsa_nt5.h" />
     <ClInclude Include="modules\sekurlsa\crypto\kuhl_m_sekurlsa_nt6.h" />
@@ -310,7 +299,6 @@
     <ClInclude Include="modules\sekurlsa\kuhl_m_sekurlsa.h" />
     <ClInclude Include="modules\sekurlsa\kuhl_m_sekurlsa_sk.h" />
     <ClInclude Include="modules\sekurlsa\kuhl_m_sekurlsa_utils.h" />
-    <ClInclude Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_cloudap.h" />
     <ClInclude Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_credman.h" />
     <ClInclude Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_dpapi.h" />
     <ClInclude Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_kerberos.h" />

