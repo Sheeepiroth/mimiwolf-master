@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mimiwolf", "mimiwolf\mimiwolf.vcxproj", "{FB9B5E61-7C34-4280-A211-E979E1D6977F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global files", "global files", "{1ADABD33-DEBE-4095-8EAE-9B6ED51DB68E}"
@@ -79,17 +81,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arm64", "arm64", "{2FC87C8A
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mimilib", "mimilib\mimilib.vcxproj", "{E049487C-C5BD-471E-99AE-C756E70B6520}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mimidrv", "mimidrv\mimidrv.vcxproj", "{86FF6D04-208C-442F-B27C-E4255DD39402}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mimilove", "mimilove\mimilove.vcxproj", "{60D02E32-1711-4D9E-9AC2-10627C52EB40}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mimispool", "mimispool\mimispool.vcxproj", "{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}"
-EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|ARM64 = Release|ARM64
 		Release|Win32 = Release|Win32
@@ -128,40 +120,6 @@ Global
 		{E049487C-C5BD-471E-99AE-C756E70B6520}.Simple_DLL|ARM64.ActiveCfg = Release|Win32
 		{E049487C-C5BD-471E-99AE-C756E70B6520}.Simple_DLL|Win32.ActiveCfg = Release|Win32
 		{E049487C-C5BD-471E-99AE-C756E70B6520}.Simple_DLL|x64.ActiveCfg = Release|x64
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Release|ARM64.ActiveCfg = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Release|Win32.ActiveCfg = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Release|Win32.Build.0 = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Release|x64.ActiveCfg = Release|x64
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Release|x64.Build.0 = Release|x64
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Second_Release_PowerShell|ARM64.ActiveCfg = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Second_Release_PowerShell|Win32.ActiveCfg = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Second_Release_PowerShell|x64.ActiveCfg = Release|x64
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Simple_DLL|ARM64.ActiveCfg = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Simple_DLL|Win32.ActiveCfg = Release|Win32
-		{86FF6D04-208C-442F-B27C-E4255DD39402}.Simple_DLL|x64.ActiveCfg = Release|x64
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Release|ARM64.ActiveCfg = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Release|Win32.ActiveCfg = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Release|Win32.Build.0 = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Release|x64.ActiveCfg = Release|x64
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Second_Release_PowerShell|ARM64.ActiveCfg = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Second_Release_PowerShell|Win32.ActiveCfg = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Second_Release_PowerShell|x64.ActiveCfg = Release|x64
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Simple_DLL|ARM64.ActiveCfg = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Simple_DLL|Win32.ActiveCfg = Release|Win32
-		{60D02E32-1711-4D9E-9AC2-10627C52EB40}.Simple_DLL|x64.ActiveCfg = Release|x64
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Release|ARM64.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Release|Win32.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Release|Win32.Build.0 = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Release|x64.ActiveCfg = Release|x64
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Release|x64.Build.0 = Release|x64
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Second_Release_PowerShell|ARM64.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Second_Release_PowerShell|Win32.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Second_Release_PowerShell|Win32.Build.0 = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Second_Release_PowerShell|x64.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Simple_DLL|ARM64.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Simple_DLL|Win32.ActiveCfg = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Simple_DLL|Win32.Build.0 = Release|Win32
-		{0BD5DE6B-8DA5-4CF1-AE53-A265010F52AA}.Simple_DLL|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,5 +130,9 @@ Global
 		{96078881-DEC1-4EF5-A24A-A81AC007809D} = {294B51F3-90EF-4F0A-BB04-20321A513A4F}
 		{E9D1619F-D4A1-4AFA-B261-B01091EB8D56} = {294B51F3-90EF-4F0A-BB04-20321A513A4F}
 		{2FC87C8A-79C0-407D-A022-A13E793C2BC1} = {294B51F3-90EF-4F0A-BB04-20321A513A4F}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

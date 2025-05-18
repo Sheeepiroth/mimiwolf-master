@@ -5,7 +5,7 @@ const KUHL_M * mimiwolf_modules[] = {
 	&kuhl_m_crypto,
 	&kuhl_m_sekurlsa,
 	&kuhl_m_kerberos,
-	&kuhl_m_ngc,
+	//&kuhl_m_ngc,
 	&kuhl_m_privilege,
 	&kuhl_m_process,
 	&kuhl_m_service,
@@ -15,19 +15,19 @@ const KUHL_M * mimiwolf_modules[] = {
 	&kuhl_m_misc,
 	&kuhl_m_token,
 	&kuhl_m_vault,
-	&kuhl_m_minesweeper,
+	//&kuhl_m_minesweeper,
 #if defined(NET_MODULE)
 	&kuhl_m_net,
 #endif
 	&kuhl_m_dpapi,
-	&kuhl_m_busylight,
+	//&kuhl_m_busylight,
 	&kuhl_m_sysenv,
 	&kuhl_m_sid,
-	&kuhl_m_iis,
+	//&kuhl_m_iis,
 	&kuhl_m_rpc,
-	&kuhl_m_sr98,
-	&kuhl_m_rdm,
-	&kuhl_m_acr,
+	//&kuhl_m_sr98,
+	//&kuhl_m_rdm,
+	//&kuhl_m_acr,
 };
 
 int wmain(int argc, wchar_t * argv[])

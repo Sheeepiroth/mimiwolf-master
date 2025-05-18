@@ -117,7 +117,6 @@
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ItemGroup>
-    <ClCompile Include="..\modules\kull_m_acr.c" />
     <ClCompile Include="..\modules\kull_m_asn1.c" />
     <ClCompile Include="..\modules\kull_m_cabinet.c" />
     <ClCompile Include="..\modules\kull_m_cred.c" />
@@ -139,7 +138,6 @@
     <ClCompile Include="..\modules\kull_m_patch.c" />
     <ClCompile Include="..\modules\kull_m_pipe.c" />
     <ClCompile Include="..\modules\kull_m_process.c" />
-    <ClCompile Include="..\modules\kull_m_rdm.c" />
     <ClCompile Include="..\modules\kull_m_registry.c" />
     <ClCompile Include="..\modules\kull_m_remotelib.c" />
     <ClCompile Include="..\modules\rpc\kull_m_rpc.c" />
@@ -193,7 +191,6 @@
     <ClCompile Include="modules\kuhl_m_net.c" />
     <ClCompile Include="modules\kuhl_m_privilege.c" />
     <ClCompile Include="modules\kuhl_m_process.c" />
-    <ClCompile Include="modules\kuhl_m_rdm.c" />
     <ClCompile Include="modules\kuhl_m_rpc.c" />
     <ClCompile Include="modules\kuhl_m_service.c" />
     <ClCompile Include="modules\kuhl_m_service_remote.c" />
@@ -221,7 +218,6 @@
     <ClCompile Include="modules\sekurlsa\packages\kuhl_m_sekurlsa_wdigest.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\modules\kull_m_acr.h" />
     <ClInclude Include="..\modules\kull_m_asn1.h" />
     <ClInclude Include="..\modules\kull_m_cabinet.h" />
     <ClInclude Include="..\modules\kull_m_cred.h" />
@@ -245,7 +241,6 @@
     <ClInclude Include="..\modules\kull_m_patch.h" />
     <ClInclude Include="..\modules\kull_m_pipe.h" />
     <ClInclude Include="..\modules\kull_m_process.h" />
-    <ClInclude Include="..\modules\kull_m_rdm.h" />
     <ClInclude Include="..\modules\kull_m_registry.h" />
     <ClInclude Include="..\modules\kull_m_registry_structures.h" />
     <ClInclude Include="..\modules\kull_m_remotelib.h" />
@@ -298,7 +293,6 @@
     <ClInclude Include="modules\kuhl_m_net.h" />
     <ClInclude Include="modules\kuhl_m_privilege.h" />
     <ClInclude Include="modules\kuhl_m_process.h" />
-    <ClInclude Include="modules\kuhl_m_rdm.h" />
     <ClInclude Include="modules\kuhl_m_rpc.h" />
     <ClInclude Include="modules\kuhl_m_service.h" />
     <ClInclude Include="modules\kuhl_m_service_remote.h" />
